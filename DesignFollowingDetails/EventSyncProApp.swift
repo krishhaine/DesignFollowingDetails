@@ -1,11 +1,11 @@
 import SwiftUI
-import Firebase
 
 @main
 struct EventSyncProApp: App {
     
     init() {
-        FirebaseApp.configure()
+        // Firebase configuration removed for local development
+        print("EventSync Pro starting in local mode")
     }
     
     var body: some Scene {
