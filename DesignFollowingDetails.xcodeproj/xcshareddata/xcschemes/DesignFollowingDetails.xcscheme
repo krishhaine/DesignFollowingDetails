@@ -3,7 +3,7 @@
    <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES">
       <BuildActionEntries>
          <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES">
-            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="D6F590A8B374C1E2" BuildableName="DesignFollowingDetails.app" BlueprintName="DesignFollowingDetails" ReferencedContainer="container:DesignFollowingDetails.xcodeproj"/>
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="6D0CE912837AB4F5" BuildableName="DesignFollowingDetails.app" BlueprintName="DesignFollowingDetails" ReferencedContainer="container:DesignFollowingDetails.xcodeproj"/>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -13,7 +13,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "41DF82703CE5BA69"
+               BlueprintIdentifier = "4C0E3A912DB76F58"
                BuildableName = "DesignFollowingDetailsTests.xctest"
                BlueprintName = "DesignFollowingDetailsTests"
                ReferencedContainer = "container:DesignFollowingDetails.xcodeproj">
@@ -23,7 +23,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A147923F5C68BED"
+               BlueprintIdentifier = "419F857C2D3EBA06"
                BuildableName = "DesignFollowingDetailsUITests.xctest"
                BlueprintName = "DesignFollowingDetailsUITests"
                ReferencedContainer = "container:DesignFollowingDetails.xcodeproj">
@@ -33,7 +33,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6F590A8B374C1E2"
+            BlueprintIdentifier = "6D0CE912837AB4F5"
             BuildableName = "DesignFollowingDetails.app"
             BlueprintName = "DesignFollowingDetails"
             ReferencedContainer = "container:DesignFollowingDetails.xcodeproj">
@@ -44,7 +44,7 @@
       <BuildableProductRunnable runnableDebuggingMode="0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6F590A8B374C1E2"
+            BlueprintIdentifier = "6D0CE912837AB4F5"
             BuildableName = "DesignFollowingDetails.app"
             BlueprintName = "DesignFollowingDetails"
             ReferencedContainer = "container:DesignFollowingDetails.xcodeproj">
@@ -56,7 +56,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6F590A8B374C1E2"
+            BlueprintIdentifier = "6D0CE912837AB4F5"
             BuildableName = "DesignFollowingDetails.app"
             BlueprintName = "DesignFollowingDetails"
             ReferencedContainer = "container:DesignFollowingDetails.xcodeproj">

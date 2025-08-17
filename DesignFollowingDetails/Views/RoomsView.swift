@@ -1,10 +1,9 @@
 import SwiftUI
 
-struct RoomStatusView: View {
+struct RoomsView: View {
     @EnvironmentObject var roomManager: RoomManager
     @EnvironmentObject var eventManager: EventManager
     @State private var selectedRoom: Room?
-    @State private var showingRoomDetails = false
     
     var body: some View {
         NavigationView {
@@ -13,13 +12,12 @@ struct RoomStatusView: View {
                     ForEach(roomManager.rooms) { room in
                         RoomCard(room: room) {
                             selectedRoom = room
-                            showingRoomDetails = true
                         }
                     }
                 }
                 .padding()
             }
-            .navigationTitle("Room Status")
+            .navigationTitle("Rooms")
             .refreshable {
                 roomManager.fetchRooms()
             }
@@ -53,7 +51,6 @@ struct RoomCard: View {
                     StatusIndicator(status: room.status)
                 }
                 
-                // Capacity bar
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
                         Text("Occupancy")
@@ -83,7 +80,6 @@ struct RoomCard: View {
                     .frame(height: 6)
                 }
                 
-                // Equipment tags
                 if !room.equipment.isEmpty {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 4) {
@@ -160,7 +156,6 @@ struct RoomDetailView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    // Room Header
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
                             Text(room.name)
@@ -177,7 +172,6 @@ struct RoomDetailView: View {
                             .foregroundColor(.secondary)
                     }
                     
-                    // Capacity Info
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Capacity Information")
                             .font(.headline)
@@ -208,7 +202,6 @@ struct RoomDetailView: View {
                         .cornerRadius(10)
                     }
                     
-                    // Equipment
                     if !room.equipment.isEmpty {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Available Equipment")
@@ -217,7 +210,7 @@ struct RoomDetailView: View {
                             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 8) {
                                 ForEach(room.equipment, id: \.self) { equipment in
                                     HStack {
-                                        Image(systemName: equipmentIcon(for: equipment))
+                                        Image(systemName: "gear")
                                             .foregroundColor(.blue)
                                         Text(equipment)
                                             .font(.caption)
@@ -232,7 +225,6 @@ struct RoomDetailView: View {
                         }
                     }
                     
-                    // Current Events
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Scheduled Events")
                             .font(.headline)
@@ -265,24 +257,10 @@ struct RoomDetailView: View {
             }
         }
     }
-    
-    private func equipmentIcon(for equipment: String) -> String {
-        switch equipment.lowercased() {
-        case let str where str.contains("projector"): return "videoprojector"
-        case let str where str.contains("sound"): return "speaker.wave.2"
-        case let str where str.contains("whiteboard"): return "rectangle.and.pencil.and.ellipsis"
-        case let str where str.contains("tv"), let str where str.contains("screen"): return "tv"
-        case let str where str.contains("phone"): return "phone"
-        case let str where str.contains("bar"): return "wineglass"
-        case let str where str.contains("stage"): return "music.mic"
-        case let str where str.contains("lighting"): return "lightbulb"
-        default: return "gear"
-        }
-    }
 }
 
 #Preview {
-    RoomStatusView()
+    RoomsView()
         .environmentObject(RoomManager())
         .environmentObject(EventManager())
 }

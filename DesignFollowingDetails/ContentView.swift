@@ -29,7 +29,7 @@ struct MainTabView: View {
                     Text("Schedule")
                 }
             
-            RoomStatusView()
+            RoomsView()
                 .tabItem {
                     Image(systemName: "building.2")
                     Text("Rooms")
